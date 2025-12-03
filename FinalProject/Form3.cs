@@ -16,5 +16,15 @@ namespace FinalProject
         {
             InitializeComponent();
         }
+
+        private void addMoneyButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fundTransferButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

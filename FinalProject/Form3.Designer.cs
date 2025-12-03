@@ -114,6 +114,7 @@ namespace FinalProject
             addMoneyButton.TabIndex = 5;
             addMoneyButton.Text = "Add Money";
             addMoneyButton.UseVisualStyleBackColor = false;
+            addMoneyButton.Click += addMoneyButton_Click;
             // 
             // fundTransferButton
             // 
@@ -128,6 +129,7 @@ namespace FinalProject
             fundTransferButton.TabIndex = 6;
             fundTransferButton.Text = "Fund Transfer";
             fundTransferButton.UseVisualStyleBackColor = false;
+            fundTransferButton.Click += fundTransferButton_Click;
             // 
             // Form3
             // 

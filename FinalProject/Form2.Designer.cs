@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             mainPanel = new Panel();
+            label1 = new Label();
             loginButton = new RoundedButton();
             passwordTextBox = new RoundedTextBox();
             usernameTextBox = new RoundedTextBox();
@@ -41,6 +42,7 @@
             // mainPanel
             // 
             mainPanel.BackColor = Color.FromArgb(45, 52, 54);
+            mainPanel.Controls.Add(label1);
             mainPanel.Controls.Add(loginButton);
             mainPanel.Controls.Add(passwordTextBox);
             mainPanel.Controls.Add(usernameTextBox);
@@ -51,6 +53,16 @@
             mainPanel.Name = "mainPanel";
             mainPanel.Size = new Size(288, 380);
             mainPanel.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(95, 236);
+            label1.Name = "label1";
+            label1.Size = new Size(87, 15);
+            label1.TabIndex = 7;
+            label1.Text = "Create account";
+            label1.Click += label1_Click;
             // 
             // loginButton
             // 
@@ -65,7 +77,7 @@
             loginButton.TabIndex = 6;
             loginButton.Text = "Log In";
             loginButton.UseVisualStyleBackColor = false;
-
+            loginButton.Click += loginButton_Click_1;
             // 
             // passwordTextBox
             // 
@@ -155,5 +167,6 @@
         private RoundedTextBox usernameTextBox;
         private RoundedTextBox passwordTextBox;
         private RoundedButton loginButton;
+        private Label label1;
     }
 }
