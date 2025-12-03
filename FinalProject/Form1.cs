@@ -150,7 +150,12 @@ namespace FinalProject
                 MessageBox.Show($"Error saving user data: {ex.Message}", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            this.Close();
+            ClearForm();
+
+            Form2 dashboard = new Form2();
+            dashboard.Show();
+
+            this.Hide();
         }
 
         private bool UsernameExists(string username)
