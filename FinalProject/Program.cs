@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace FinalProject
 {
     internal static class Program
@@ -12,6 +14,7 @@ namespace FinalProject
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+            Application.Run(new Form2());
         }
     }
 }

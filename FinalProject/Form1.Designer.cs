@@ -70,7 +70,7 @@ namespace FinalProject
             titleLabel.AutoSize = true;
             titleLabel.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             titleLabel.ForeColor = Color.White;
-            titleLabel.Location = new Point(124, 20);
+            titleLabel.Location = new Point(87, 21);
             titleLabel.Name = "titleLabel";
             titleLabel.Size = new Size(109, 30);
             titleLabel.TabIndex = 1;
@@ -81,7 +81,7 @@ namespace FinalProject
             signInUpLabel.AutoSize = true;
             signInUpLabel.Font = new Font("Segoe UI", 10F);
             signInUpLabel.ForeColor = Color.FromArgb(189, 195, 199);
-            signInUpLabel.Location = new Point(114, 60);
+            signInUpLabel.Location = new Point(90, 60);
             signInUpLabel.Name = "signInUpLabel";
             signInUpLabel.Size = new Size(101, 19);
             signInUpLabel.TabIndex = 2;
@@ -92,7 +92,7 @@ namespace FinalProject
             welcomeLabel.AutoSize = true;
             welcomeLabel.Font = new Font("Segoe UI", 12F);
             welcomeLabel.ForeColor = Color.White;
-            welcomeLabel.Location = new Point(119, 85);
+            welcomeLabel.Location = new Point(105, 85);
             welcomeLabel.Name = "welcomeLabel";
             welcomeLabel.Size = new Size(74, 21);
             welcomeLabel.TabIndex = 3;
