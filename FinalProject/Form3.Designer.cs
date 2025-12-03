@@ -54,7 +54,7 @@ namespace FinalProject
             mainPanel.Controls.Add(fundTransferButton);
             mainPanel.Location = new Point(20, 50);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(288, 350);
+            mainPanel.Size = new Size(288, 483);
             mainPanel.TabIndex = 0;
             // 
             // greetingLabel
@@ -73,11 +73,12 @@ namespace FinalProject
             userNameLabel.AutoSize = true;
             userNameLabel.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             userNameLabel.ForeColor = Color.White;
-            userNameLabel.Location = new Point(30, 60);
+            userNameLabel.Location = new Point(30, 62);
             userNameLabel.Name = "userNameLabel";
             userNameLabel.Size = new Size(247, 30);
             userNameLabel.TabIndex = 2;
             userNameLabel.Text = "Mark Aaron Estanooco";
+            userNameLabel.Click += userNameLabel_Click;
             // 
             // accountBalanceLabel
             // 
@@ -108,13 +109,12 @@ namespace FinalProject
             addMoneyButton.FlatStyle = FlatStyle.Flat;
             addMoneyButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             addMoneyButton.ForeColor = Color.White;
-            addMoneyButton.Location = new Point(30, 220);
+            addMoneyButton.Location = new Point(26, 409);
             addMoneyButton.Name = "addMoneyButton";
             addMoneyButton.Size = new Size(110, 40);
             addMoneyButton.TabIndex = 5;
             addMoneyButton.Text = "Add Money";
             addMoneyButton.UseVisualStyleBackColor = false;
-            addMoneyButton.Click += addMoneyButton_Click;
             // 
             // fundTransferButton
             // 
@@ -123,7 +123,7 @@ namespace FinalProject
             fundTransferButton.FlatStyle = FlatStyle.Flat;
             fundTransferButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             fundTransferButton.ForeColor = Color.White;
-            fundTransferButton.Location = new Point(150, 220);
+            fundTransferButton.Location = new Point(157, 409);
             fundTransferButton.Name = "fundTransferButton";
             fundTransferButton.Size = new Size(110, 40);
             fundTransferButton.TabIndex = 6;
