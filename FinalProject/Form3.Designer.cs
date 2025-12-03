@@ -1,4 +1,9 @@
-﻿namespace FinalProject
+﻿using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+
+namespace FinalProject
 {
     partial class Form3
     {
@@ -28,20 +33,125 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            mainPanel = new Panel();
+            greetingLabel = new Label();
+            userNameLabel = new Label();
+            accountBalanceLabel = new Label();
+            balanceAmountLabel = new Label();
+            addMoneyButton = new RoundedButton();
+            fundTransferButton = new RoundedButton();
+            mainPanel.SuspendLayout();
             SuspendLayout();
+            // 
+            // mainPanel
+            // 
+            mainPanel.BackColor = Color.FromArgb(45, 52, 54);
+            mainPanel.Controls.Add(greetingLabel);
+            mainPanel.Controls.Add(userNameLabel);
+            mainPanel.Controls.Add(accountBalanceLabel);
+            mainPanel.Controls.Add(balanceAmountLabel);
+            mainPanel.Controls.Add(addMoneyButton);
+            mainPanel.Controls.Add(fundTransferButton);
+            mainPanel.Location = new Point(20, 50);
+            mainPanel.Name = "mainPanel";
+            mainPanel.Size = new Size(288, 350);
+            mainPanel.TabIndex = 0;
+            // 
+            // greetingLabel
+            // 
+            greetingLabel.AutoSize = true;
+            greetingLabel.Font = new Font("Segoe UI", 12F);
+            greetingLabel.ForeColor = Color.White;
+            greetingLabel.Location = new Point(30, 30);
+            greetingLabel.Name = "greetingLabel";
+            greetingLabel.Size = new Size(84, 21);
+            greetingLabel.TabIndex = 1;
+            greetingLabel.Text = "Good Day!";
+            // 
+            // userNameLabel
+            // 
+            userNameLabel.AutoSize = true;
+            userNameLabel.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            userNameLabel.ForeColor = Color.White;
+            userNameLabel.Location = new Point(30, 60);
+            userNameLabel.Name = "userNameLabel";
+            userNameLabel.Size = new Size(247, 30);
+            userNameLabel.TabIndex = 2;
+            userNameLabel.Text = "Mark Aaron Estanooco";
+            // 
+            // accountBalanceLabel
+            // 
+            accountBalanceLabel.AutoSize = true;
+            accountBalanceLabel.Font = new Font("Segoe UI", 10F);
+            accountBalanceLabel.ForeColor = Color.FromArgb(189, 195, 199);
+            accountBalanceLabel.Location = new Point(30, 120);
+            accountBalanceLabel.Name = "accountBalanceLabel";
+            accountBalanceLabel.Size = new Size(109, 19);
+            accountBalanceLabel.TabIndex = 3;
+            accountBalanceLabel.Text = "Account Balance";
+            // 
+            // balanceAmountLabel
+            // 
+            balanceAmountLabel.AutoSize = true;
+            balanceAmountLabel.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            balanceAmountLabel.ForeColor = Color.White;
+            balanceAmountLabel.Location = new Point(30, 145);
+            balanceAmountLabel.Name = "balanceAmountLabel";
+            balanceAmountLabel.Size = new Size(159, 37);
+            balanceAmountLabel.TabIndex = 4;
+            balanceAmountLabel.Text = "12,500,000";
+            // 
+            // addMoneyButton
+            // 
+            addMoneyButton.BackColor = Color.FromArgb(0, 188, 212);
+            addMoneyButton.CornerRadius = 20;
+            addMoneyButton.FlatStyle = FlatStyle.Flat;
+            addMoneyButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            addMoneyButton.ForeColor = Color.White;
+            addMoneyButton.Location = new Point(30, 220);
+            addMoneyButton.Name = "addMoneyButton";
+            addMoneyButton.Size = new Size(110, 40);
+            addMoneyButton.TabIndex = 5;
+            addMoneyButton.Text = "Add Money";
+            addMoneyButton.UseVisualStyleBackColor = false;
+            // 
+            // fundTransferButton
+            // 
+            fundTransferButton.BackColor = Color.FromArgb(0, 188, 212);
+            fundTransferButton.CornerRadius = 20;
+            fundTransferButton.FlatStyle = FlatStyle.Flat;
+            fundTransferButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            fundTransferButton.ForeColor = Color.White;
+            fundTransferButton.Location = new Point(150, 220);
+            fundTransferButton.Name = "fundTransferButton";
+            fundTransferButton.Size = new Size(110, 40);
+            fundTransferButton.TabIndex = 6;
+            fundTransferButton.Text = "Fund Transfer";
+            fundTransferButton.UseVisualStyleBackColor = false;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(355, 450);
+            BackColor = Color.FromArgb(226, 240, 203);
+            ClientSize = new Size(328, 580);
+            Controls.Add(mainPanel);
             Name = "Form3";
-            Text = "Form3";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "MEEBank";
+            mainPanel.ResumeLayout(false);
+            mainPanel.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel mainPanel;
+        private Label greetingLabel;
+        private Label userNameLabel;
+        private Label accountBalanceLabel;
+        private Label balanceAmountLabel;
+        private RoundedButton addMoneyButton;
+        private RoundedButton fundTransferButton;
     }
 }
