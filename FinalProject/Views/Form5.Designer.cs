@@ -57,7 +57,7 @@ namespace FinalProject
             successLabel.ForeColor = Color.FromArgb(45, 52, 54);
             successLabel.Location = new Point(75, 67);
             successLabel.Name = "successLabel";
-            successLabel.Size = new Size(240, 32);
+            successLabel.Size = new Size(295, 41);
             successLabel.TabIndex = 0;
             successLabel.Text = "Transfer Successful!";
             // 
@@ -88,7 +88,7 @@ namespace FinalProject
             orderDetailsLabel.ForeColor = Color.FromArgb(45, 52, 54);
             orderDetailsLabel.Location = new Point(30, 20);
             orderDetailsLabel.Name = "orderDetailsLabel";
-            orderDetailsLabel.Size = new Size(110, 21);
+            orderDetailsLabel.Size = new Size(138, 28);
             orderDetailsLabel.TabIndex = 2;
             orderDetailsLabel.Text = "Order Details";
             // 
@@ -99,7 +99,7 @@ namespace FinalProject
             receiverNoLabel.ForeColor = Color.FromArgb(127, 140, 141);
             receiverNoLabel.Location = new Point(30, 70);
             receiverNoLabel.Name = "receiverNoLabel";
-            receiverNoLabel.Size = new Size(73, 15);
+            receiverNoLabel.Size = new Size(92, 20);
             receiverNoLabel.TabIndex = 3;
             receiverNoLabel.Text = "Receiver No.";
             // 
@@ -110,7 +110,7 @@ namespace FinalProject
             receiverValueLabel.ForeColor = Color.FromArgb(45, 52, 54);
             receiverValueLabel.Location = new Point(30, 90);
             receiverValueLabel.Name = "receiverValueLabel";
-            receiverValueLabel.Size = new Size(97, 19);
+            receiverValueLabel.Size = new Size(109, 23);
             receiverValueLabel.TabIndex = 4;
             receiverValueLabel.Text = "09990364060";
             // 
@@ -121,7 +121,7 @@ namespace FinalProject
             senderNoLabel.ForeColor = Color.FromArgb(127, 140, 141);
             senderNoLabel.Location = new Point(30, 130);
             senderNoLabel.Name = "senderNoLabel";
-            senderNoLabel.Size = new Size(65, 15);
+            senderNoLabel.Size = new Size(82, 20);
             senderNoLabel.TabIndex = 5;
             senderNoLabel.Text = "Sender No.";
             // 
@@ -132,7 +132,7 @@ namespace FinalProject
             senderValueLabel.ForeColor = Color.FromArgb(45, 52, 54);
             senderValueLabel.Location = new Point(30, 150);
             senderValueLabel.Name = "senderValueLabel";
-            senderValueLabel.Size = new Size(97, 19);
+            senderValueLabel.Size = new Size(109, 23);
             senderValueLabel.TabIndex = 6;
             senderValueLabel.Text = "09572887390";
             // 
@@ -143,7 +143,7 @@ namespace FinalProject
             amountLabel.ForeColor = Color.FromArgb(127, 140, 141);
             amountLabel.Location = new Point(30, 190);
             amountLabel.Name = "amountLabel";
-            amountLabel.Size = new Size(51, 15);
+            amountLabel.Size = new Size(62, 20);
             amountLabel.TabIndex = 7;
             amountLabel.Text = "Amount";
             // 
@@ -154,7 +154,7 @@ namespace FinalProject
             amountValueLabel.ForeColor = Color.FromArgb(45, 52, 54);
             amountValueLabel.Location = new Point(30, 210);
             amountValueLabel.Name = "amountValueLabel";
-            amountValueLabel.Size = new Size(52, 19);
+            amountValueLabel.Size = new Size(60, 23);
             amountValueLabel.TabIndex = 8;
             amountValueLabel.Text = "₱5,000";
             // 
@@ -165,7 +165,7 @@ namespace FinalProject
             dateTimeLabel.ForeColor = Color.FromArgb(127, 140, 141);
             dateTimeLabel.Location = new Point(30, 250);
             dateTimeLabel.Name = "dateTimeLabel";
-            dateTimeLabel.Size = new Size(64, 15);
+            dateTimeLabel.Size = new Size(82, 20);
             dateTimeLabel.TabIndex = 9;
             dateTimeLabel.Text = "Date & Time";
             // 
@@ -176,9 +176,10 @@ namespace FinalProject
             dateTimeValueLabel.ForeColor = Color.FromArgb(45, 52, 54);
             dateTimeValueLabel.Location = new Point(30, 270);
             dateTimeValueLabel.Name = "dateTimeValueLabel";
-            dateTimeValueLabel.Size = new Size(148, 19);
+            dateTimeValueLabel.Size = new Size(174, 23);
             dateTimeValueLabel.TabIndex = 10;
             dateTimeValueLabel.Text = "Dec 4, 2023 10:30 AM";
+            dateTimeValueLabel.Click += dateTimeValueLabel_Click;
             // 
             // newBalanceLabel
             // 
@@ -187,7 +188,7 @@ namespace FinalProject
             newBalanceLabel.ForeColor = Color.FromArgb(127, 140, 141);
             newBalanceLabel.Location = new Point(30, 310);
             newBalanceLabel.Name = "newBalanceLabel";
-            newBalanceLabel.Size = new Size(75, 15);
+            newBalanceLabel.Size = new Size(95, 20);
             newBalanceLabel.TabIndex = 11;
             newBalanceLabel.Text = "New Balance";
             // 
@@ -198,7 +199,7 @@ namespace FinalProject
             newBalanceValueLabel.ForeColor = Color.FromArgb(45, 52, 54);
             newBalanceValueLabel.Location = new Point(30, 330);
             newBalanceValueLabel.Name = "newBalanceValueLabel";
-            newBalanceValueLabel.Size = new Size(87, 19);
+            newBalanceValueLabel.Size = new Size(100, 23);
             newBalanceValueLabel.TabIndex = 12;
             newBalanceValueLabel.Text = "₱12,495,000";
             // 

@@ -35,7 +35,7 @@ namespace FinalProject
             }
             else
             {
-                userNameLabel.Text = "Unknown User";
+                userNameLabel.Text = _userName;
                 // Optional: log warning or disable functionality that depends on a valid account.
             }
         }
