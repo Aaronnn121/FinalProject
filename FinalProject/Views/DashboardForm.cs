@@ -4,6 +4,8 @@ using System.Security.Principal;
 using System.Windows.Forms;
 using FinalProject.Models;
 using FinalProject.Respository;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 
 namespace FinalProject
 {
@@ -23,8 +25,22 @@ namespace FinalProject
             _userName = userName;
             _account = _repository.GetByUsername(_userName);
 
-            userNameLabel.Text = _account.FullName;
+            UpdateUserNameLabel();
         }
+        private void UpdateUserNameLabel()
+        {
+            if (_account != null)
+            {
+                userNameLabel.Text = _account.FullName;
+            }
+            else
+            {
+                userNameLabel.Text = "Unknown User";
+                // Optional: log warning or disable functionality that depends on a valid account.
+            }
+        }
+
+
 
         private void fundTransferButton_Click(object sender, EventArgs e)
         {
@@ -37,7 +53,8 @@ namespace FinalProject
 
         private void userNameLabel_Click(object sender, EventArgs e)
         {
-
+            _account = _repository.GetByUsername(userNameLabel.Text);
+            UpdateUserNameLabel();
         }
 
         private void DashboardForm_Load(object sender, EventArgs e)

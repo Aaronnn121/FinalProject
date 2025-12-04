@@ -2,8 +2,12 @@
 using System.Windows.Forms;
 using FinalProject.Models;
 
+
 namespace FinalProject
 {
+
+ 
+
     // In Form4.cs (your partial class)
     public partial class SendMoneyForm : Form
     {
@@ -23,7 +27,7 @@ namespace FinalProject
             InitializeComponent();
             _loggedInAccount = accountModel;
             Instance = this;  // NEW: Register instance
-            amountTextBox.Text = "1000.00";  // Starting
+            amountTextBox.Text = " ";  // Starting
         }
 
         
