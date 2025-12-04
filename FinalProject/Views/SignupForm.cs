@@ -4,12 +4,12 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    public partial class Form1 : Form
+    public partial class SignupForm : Form
     {
         // File path to store user data
         private string userDataFile = "users.txt";
 
-        public Form1()
+        public SignupForm()
         {
             InitializeComponent();
             // Set password character to hide input
@@ -152,7 +152,7 @@ namespace FinalProject
             }
             ClearForm();
 
-            Form2 dashboard = new Form2();
+            LoginForm dashboard = new LoginForm();
             dashboard.Show();
 
             this.Hide();
@@ -175,6 +175,9 @@ namespace FinalProject
             return false;
         }
 
+        //sqlite
+        //separate file
+        //userrepository
         private void SaveUser(string fullName, string username, string password)
         {
             // Format: FullName|Username|Password

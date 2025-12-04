@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    partial class Form4
+    partial class SendMoneyForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace FinalProject
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SendMoneyForm));
             titleLabel = new Label();
             contactLabel = new Label();
             recipientTextBox = new RoundedTextBox();

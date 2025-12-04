@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    partial class Form3
+    partial class DashboardForm
     {
         /// <summary>
         /// Required designer variable.
@@ -143,16 +143,17 @@ namespace FinalProject
             fundTransferButton.UseVisualStyleBackColor = false;
             fundTransferButton.Click += fundTransferButton_Click;
             // 
-            // Form3
+            // DashboardForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(226, 240, 203);
             ClientSize = new Size(328, 580);
             Controls.Add(mainPanel);
-            Name = "Form3";
+            Name = "DashboardForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MEEBank";
+            Load += DashboardForm_Load;
             mainPanel.ResumeLayout(false);
             mainPanel.PerformLayout();
             ResumeLayout(false);

@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    partial class Form1
+    partial class SignupForm
     {
         /// <summary>
         /// Required designer variable.

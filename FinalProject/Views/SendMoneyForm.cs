@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Windows.Forms;
+using FinalProject.Models;
 
 namespace FinalProject
 {
     // In Form4.cs (your partial class)
-    public partial class Form4 : Form
+    public partial class SendMoneyForm : Form
     {
-        public static Form4 Instance;  // NEW: Global access from Form3
+        public static SendMoneyForm Instance;  // NEW: Global access from Form3
 
         // NEW: Public properties to "read/write" UI safely (no private hacks)
+        private AccountModel _loggedInAccount;
 
         public string RecipientLabelText
         {
@@ -16,9 +18,10 @@ namespace FinalProject
             set => amountTextBox.Text = value;
         }
 
-        public Form4()
+        public SendMoneyForm(AccountModel accountModel)
         {
             InitializeComponent();
+            _loggedInAccount = accountModel;
             Instance = this;  // NEW: Register instance
             amountTextBox.Text = "1000.00";  // Starting
         }
@@ -44,7 +47,11 @@ namespace FinalProject
             amountTextBox.Clear();
             amountTextBox.Focus();
 
-            Form5 dashboard = new Form5();
+            TransactionModel transaction = new TransactionModel();
+            transaction.Sender = _loggedInAccount;
+            transaction.Receiver = new AccountModel { FullName = recipientTextBox.Text.Trim() };
+
+            Form5 dashboard = new Form5(transaction);
             dashboard.Show();
 
             this.Hide();

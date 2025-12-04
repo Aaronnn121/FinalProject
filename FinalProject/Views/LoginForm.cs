@@ -4,9 +4,9 @@ using static System.Windows.Forms.DataFormats;
 
 namespace FinalProject
 {
-    public partial class Form2 : Form
+    public partial class LoginForm : Form
     {
-        public Form2()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace FinalProject
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Open next form (Form3) instead of Form2
-                Form dashboard = new Form3();
+                Form dashboard = new DashboardForm(user);
                 dashboard.Show();
                 this.Hide();
             }
@@ -47,7 +47,7 @@ namespace FinalProject
         private void label1_Click(object sender, EventArgs e)
         {
 
-            Form1 dashboard = new Form1();
+            SignupForm dashboard = new SignupForm();
             dashboard.Show();
 
             this.Hide();
@@ -71,7 +71,7 @@ namespace FinalProject
                 MessageBox.Show("Login successful!", "MEEBank",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                Form dashboard = new Form3();
+                Form dashboard = new DashboardForm(user);
                 dashboard.Show();
                 this.Hide();
             }
