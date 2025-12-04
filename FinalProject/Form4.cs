@@ -23,10 +23,35 @@ namespace FinalProject
             amountTextBox.Text = "1000.00";  // Starting
         }
 
-        private void transferButton_Click(object sender, EventArgs e)
+        
+            private void transferButton_Click(object sender, EventArgs e)
         {
+            // Validate the amount entered in the amountTextBox
+            if (!decimal.TryParse(amountTextBox.Text, out decimal amount) || amount <= 0)
+            {
+                MessageBox.Show("Please enter a valid positive amount to transfer.",
+                                "Invalid Amount",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                amountTextBox.Focus();
+                amountTextBox.SelectAll();
+                return;
+            }
+
+            // Perform transfer logic (dummy message for now)
+            
+            // Clear the input field after transfer
+            amountTextBox.Clear();
+            amountTextBox.Focus();
+
+            Form5 dashboard = new Form5();
+            dashboard.Show();
+
+            this.Hide();
 
         }
+
+       
 
         private void Form4_Load(object sender, EventArgs e)
         {
