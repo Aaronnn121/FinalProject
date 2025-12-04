@@ -55,7 +55,7 @@ namespace FinalProject
 
         private void loginButton_Click_1(object sender, EventArgs e)
         {
-          
+
             string user = usernameTextBox.Text.Trim();
             string pass = passwordTextBox.Text;
 
@@ -101,5 +101,5 @@ namespace FinalProject
             return false;
         }
     }
-    
+
 }

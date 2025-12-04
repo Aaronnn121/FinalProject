@@ -34,6 +34,7 @@ namespace FinalProject
         private void InitializeComponent()
         {
             mainPanel = new Panel();
+            balanceLabel = new Label();
             greetingLabel = new Label();
             userNameLabel = new Label();
             accountBalanceLabel = new Label();
@@ -46,6 +47,7 @@ namespace FinalProject
             // mainPanel
             // 
             mainPanel.BackColor = Color.FromArgb(45, 52, 54);
+            mainPanel.Controls.Add(balanceLabel);
             mainPanel.Controls.Add(greetingLabel);
             mainPanel.Controls.Add(userNameLabel);
             mainPanel.Controls.Add(accountBalanceLabel);
@@ -56,6 +58,17 @@ namespace FinalProject
             mainPanel.Name = "mainPanel";
             mainPanel.Size = new Size(288, 483);
             mainPanel.TabIndex = 0;
+            // 
+            // balanceLabel
+            // 
+            balanceLabel.AutoSize = true;
+            balanceLabel.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            balanceLabel.ForeColor = Color.White;
+            balanceLabel.Location = new Point(30, 151);
+            balanceLabel.Name = "balanceLabel";
+            balanceLabel.Size = new Size(129, 30);
+            balanceLabel.TabIndex = 7;
+            balanceLabel.Text = "12,500,000";
             // 
             // greetingLabel
             // 
@@ -98,9 +111,8 @@ namespace FinalProject
             balanceAmountLabel.ForeColor = Color.White;
             balanceAmountLabel.Location = new Point(30, 145);
             balanceAmountLabel.Name = "balanceAmountLabel";
-            balanceAmountLabel.Size = new Size(159, 37);
+            balanceAmountLabel.Size = new Size(0, 37);
             balanceAmountLabel.TabIndex = 4;
-            balanceAmountLabel.Text = "12,500,000";
             // 
             // addMoneyButton
             // 
@@ -155,5 +167,6 @@ namespace FinalProject
         private Label balanceAmountLabel;
         private RoundedButton addMoneyButton;
         private RoundedButton fundTransferButton;
+        private Label balanceLabel;
     }
 }

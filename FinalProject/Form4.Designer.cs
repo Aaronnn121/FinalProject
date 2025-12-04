@@ -49,6 +49,8 @@ namespace FinalProject
             amountSubLabel = new Label();
             amountTextBox = new RoundedTextBox();
             transferButton = new RoundedButton();
+            balanceAmountLabel = new RoundedTextBox();
+            label1 = new Label();
             contactPanel.SuspendLayout();
             contact1Panel.SuspendLayout();
             contact2Panel.SuspendLayout();
@@ -72,7 +74,7 @@ namespace FinalProject
             contactLabel.BackColor = Color.Transparent;
             contactLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             contactLabel.ForeColor = Color.FromArgb(45, 52, 54);
-            contactLabel.Location = new Point(20, 80);
+            contactLabel.Location = new Point(20, 178);
             contactLabel.Name = "contactLabel";
             contactLabel.Size = new Size(69, 21);
             contactLabel.TabIndex = 1;
@@ -85,7 +87,7 @@ namespace FinalProject
             recipientTextBox.BorderSize = 1;
             recipientTextBox.CornerRadius = 15;
             recipientTextBox.Font = new Font("Segoe UI", 10F);
-            recipientTextBox.Location = new Point(20, 110);
+            recipientTextBox.Location = new Point(20, 208);
             recipientTextBox.Name = "recipientTextBox";
             recipientTextBox.Size = new Size(335, 25);
             recipientTextBox.TabIndex = 2;
@@ -97,7 +99,7 @@ namespace FinalProject
             recentLabel.BackColor = Color.Transparent;
             recentLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             recentLabel.ForeColor = Color.FromArgb(45, 52, 54);
-            recentLabel.Location = new Point(20, 170);
+            recentLabel.Location = new Point(20, 243);
             recentLabel.Name = "recentLabel";
             recentLabel.Size = new Size(62, 21);
             recentLabel.TabIndex = 3;
@@ -110,7 +112,7 @@ namespace FinalProject
             seeAllLabel.Cursor = Cursors.Hand;
             seeAllLabel.Font = new Font("Segoe UI", 9F);
             seeAllLabel.ForeColor = Color.DarkGreen;
-            seeAllLabel.Location = new Point(280, 173);
+            seeAllLabel.Location = new Point(280, 246);
             seeAllLabel.Name = "seeAllLabel";
             seeAllLabel.Size = new Size(83, 15);
             seeAllLabel.TabIndex = 4;
@@ -121,7 +123,7 @@ namespace FinalProject
             contactPanel.BackColor = Color.White;
             contactPanel.Controls.Add(contact1Panel);
             contactPanel.Controls.Add(contact2Panel);
-            contactPanel.Location = new Point(20, 200);
+            contactPanel.Location = new Point(20, 273);
             contactPanel.Name = "contactPanel";
             contactPanel.Size = new Size(335, 180);
             contactPanel.TabIndex = 5;
@@ -199,7 +201,7 @@ namespace FinalProject
             setAmountLabel.BackColor = Color.Transparent;
             setAmountLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             setAmountLabel.ForeColor = Color.FromArgb(45, 52, 54);
-            setAmountLabel.Location = new Point(20, 410);
+            setAmountLabel.Location = new Point(20, 464);
             setAmountLabel.Name = "setAmountLabel";
             setAmountLabel.Size = new Size(98, 21);
             setAmountLabel.TabIndex = 6;
@@ -211,7 +213,7 @@ namespace FinalProject
             amountSubLabel.BackColor = Color.Transparent;
             amountSubLabel.Font = new Font("Segoe UI", 9F);
             amountSubLabel.ForeColor = Color.FromArgb(127, 140, 141);
-            amountSubLabel.Location = new Point(20, 435);
+            amountSubLabel.Location = new Point(20, 489);
             amountSubLabel.Name = "amountSubLabel";
             amountSubLabel.Size = new Size(210, 15);
             amountSubLabel.TabIndex = 7;
@@ -224,7 +226,7 @@ namespace FinalProject
             amountTextBox.BorderSize = 1;
             amountTextBox.CornerRadius = 15;
             amountTextBox.Font = new Font("Segoe UI", 12F);
-            amountTextBox.Location = new Point(20, 460);
+            amountTextBox.Location = new Point(20, 514);
             amountTextBox.Name = "amountTextBox";
             amountTextBox.Size = new Size(335, 29);
             amountTextBox.TabIndex = 8;
@@ -236,7 +238,7 @@ namespace FinalProject
             transferButton.FlatStyle = FlatStyle.Flat;
             transferButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             transferButton.ForeColor = Color.Transparent;
-            transferButton.Location = new Point(20, 530);
+            transferButton.Location = new Point(20, 567);
             transferButton.Name = "transferButton";
             transferButton.Size = new Size(335, 50);
             transferButton.TabIndex = 9;
@@ -244,11 +246,37 @@ namespace FinalProject
             transferButton.UseVisualStyleBackColor = false;
             transferButton.Click += transferButton_Click;
             // 
+            // balanceAmountLabel
+            // 
+            balanceAmountLabel.BackColor = Color.FromArgb(245, 245, 245);
+            balanceAmountLabel.BorderColor = Color.White;
+            balanceAmountLabel.BorderSize = 1;
+            balanceAmountLabel.CornerRadius = 15;
+            balanceAmountLabel.Font = new Font("Segoe UI", 12F);
+            balanceAmountLabel.Location = new Point(20, 126);
+            balanceAmountLabel.Name = "balanceAmountLabel";
+            balanceAmountLabel.Size = new Size(335, 29);
+            balanceAmountLabel.TabIndex = 10;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label1.ForeColor = Color.FromArgb(45, 52, 54);
+            label1.Location = new Point(20, 102);
+            label1.Name = "label1";
+            label1.Size = new Size(131, 21);
+            label1.TabIndex = 11;
+            label1.Text = "Current Balance";
+            // 
             // Form4
             // 
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(375, 667);
+            Controls.Add(label1);
+            Controls.Add(balanceAmountLabel);
             Controls.Add(titleLabel);
             Controls.Add(contactLabel);
             Controls.Add(recipientTextBox);
@@ -290,5 +318,7 @@ namespace FinalProject
         private Label amountSubLabel;
         private RoundedTextBox amountTextBox;
         private RoundedButton transferButton;
+        private RoundedTextBox balanceAmountLabel;
+        private Label label1;
     }
 }
