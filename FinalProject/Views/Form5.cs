@@ -19,6 +19,7 @@ namespace FinalProject
             receiverValueLabel.Text = _transaction.Receiver.FullName;
             DateTime dateTime = DateTime.Now;
             dateTimeValueLabel.Text = dateTime.ToString("MMMM dd, yyyy hh:mm tt");
+            //ghdshd
 
         }
 
