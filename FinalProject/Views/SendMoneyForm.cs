@@ -45,6 +45,19 @@ namespace FinalProject
 
             transaction.Amount = (double)amount;
 
+            // --- NEW: save the transfer to the recent-transactions repository so it shows in history ---
+            var repo = new RecentTransactionRepository();
+            var record = new Models.User
+            {
+                FullName = transaction.Receiver?.FullName ?? "Unknown Receiver",
+                AccountBalance = 0m, // set if you have the balance available on AccountModel
+                TransactionType = "Transfer",
+                Amount = amount // decimal
+                // TransactionDate will be set inside SaveTransaction()
+            };
+            repo.SaveTransaction(record);
+            // --- END new code ---
+
             Form5 dashboard = new Form5(transaction);
             dashboard.Show();
             this.Hide();
