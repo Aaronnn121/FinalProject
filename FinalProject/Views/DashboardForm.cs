@@ -23,7 +23,7 @@ namespace FinalProject
             _repository = new AccountRepository();
 
             _userName = userName;
-            _account = _repository.GetByUsername(_userName);
+           // _account = _repository.GetByUsername(_userName);
 
             UpdateUserNameLabel();
         }
@@ -53,7 +53,7 @@ namespace FinalProject
 
         private void userNameLabel_Click(object sender, EventArgs e)
         {
-            _account = _repository.GetByUsername(userNameLabel.Text);
+            //_account = _repository.GetByUsername(userNameLabel.Text);
             UpdateUserNameLabel();
         }
 

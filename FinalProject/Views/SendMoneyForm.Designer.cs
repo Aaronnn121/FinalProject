@@ -230,6 +230,7 @@ namespace FinalProject
             amountTextBox.Name = "amountTextBox";
             amountTextBox.Size = new Size(335, 29);
             amountTextBox.TabIndex = 8;
+            amountTextBox.TextChanged += amountTextBox_TextChanged;
             // 
             // transferButton
             // 
@@ -270,7 +271,7 @@ namespace FinalProject
             label1.TabIndex = 11;
             label1.Text = "Current Balance";
             // 
-            // Form4
+            // SendMoneyForm
             // 
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
@@ -288,7 +289,7 @@ namespace FinalProject
             Controls.Add(amountTextBox);
             Controls.Add(transferButton);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Name = "Form4";
+            Name = "SendMoneyForm";
             Text = "Fund Transfer";
             Load += Form4_Load;
             contactPanel.ResumeLayout(false);

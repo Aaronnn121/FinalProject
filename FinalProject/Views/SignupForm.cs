@@ -143,7 +143,7 @@ namespace FinalProject
 
                 // Clear all fields
                 ClearForm();
-                
+
             }
             catch (Exception ex)
             {
@@ -196,6 +196,11 @@ namespace FinalProject
             passwordTextBox.Clear();
             passwordTextBox.BackColor = System.Drawing.SystemColors.Window;
             fullNameTextBox.Focus();
+        }
+
+        private void SignupForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

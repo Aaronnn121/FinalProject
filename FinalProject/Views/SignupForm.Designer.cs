@@ -187,7 +187,7 @@ namespace FinalProject
             signUpButton.UseVisualStyleBackColor = false;
             signUpButton.Click += signUpButton_Click;
             // 
-            // Form1
+            // SignupForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -196,9 +196,10 @@ namespace FinalProject
             Controls.Add(mainPanel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "Form1";
+            Name = "SignupForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MEEBank";
+            Load += SignupForm_Load;
             mainPanel.ResumeLayout(false);
             mainPanel.PerformLayout();
             ResumeLayout(false);

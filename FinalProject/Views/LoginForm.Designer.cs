@@ -91,6 +91,7 @@
             passwordTextBox.PlaceholderText = "Password";
             passwordTextBox.Size = new Size(228, 23);
             passwordTextBox.TabIndex = 5;
+            passwordTextBox.Text = "12345678";
             passwordTextBox.UseSystemPasswordChar = true;
             passwordTextBox.TextChanged += passwordTextBox_TextChanged;
             // 
@@ -106,6 +107,7 @@
             usernameTextBox.PlaceholderText = "Username";
             usernameTextBox.Size = new Size(228, 23);
             usernameTextBox.TabIndex = 4;
+            usernameTextBox.Text = "qwerty";
             usernameTextBox.TextChanged += usernameTextBox_TextChanged;
             // 
             // welcomeLabel
@@ -141,7 +143,7 @@
             titleLabel.TabIndex = 1;
             titleLabel.Text = "MEEBank";
             // 
-            // Form2
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -150,7 +152,7 @@
             Controls.Add(mainPanel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "Form2";
+            Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MEEBank";
             mainPanel.ResumeLayout(false);

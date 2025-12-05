@@ -38,14 +38,10 @@ namespace FinalProject
             orderDetailsLabel = new Label();
             receiverNoLabel = new Label();
             receiverValueLabel = new Label();
-            senderNoLabel = new Label();
-            senderValueLabel = new Label();
             amountLabel = new Label();
             amountValueLabel = new Label();
             dateTimeLabel = new Label();
             dateTimeValueLabel = new Label();
-            newBalanceLabel = new Label();
-            newBalanceValueLabel = new Label();
             recentTransactionButton = new Button();
             mainPanel.SuspendLayout();
             SuspendLayout();
@@ -57,7 +53,7 @@ namespace FinalProject
             successLabel.ForeColor = Color.FromArgb(45, 52, 54);
             successLabel.Location = new Point(75, 67);
             successLabel.Name = "successLabel";
-            successLabel.Size = new Size(295, 41);
+            successLabel.Size = new Size(240, 32);
             successLabel.TabIndex = 0;
             successLabel.Text = "Transfer Successful!";
             // 
@@ -67,17 +63,13 @@ namespace FinalProject
             mainPanel.Controls.Add(orderDetailsLabel);
             mainPanel.Controls.Add(receiverNoLabel);
             mainPanel.Controls.Add(receiverValueLabel);
-            mainPanel.Controls.Add(senderNoLabel);
-            mainPanel.Controls.Add(senderValueLabel);
             mainPanel.Controls.Add(amountLabel);
             mainPanel.Controls.Add(amountValueLabel);
             mainPanel.Controls.Add(dateTimeLabel);
             mainPanel.Controls.Add(dateTimeValueLabel);
-            mainPanel.Controls.Add(newBalanceLabel);
-            mainPanel.Controls.Add(newBalanceValueLabel);
             mainPanel.Location = new Point(20, 120);
             mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(335, 400);
+            mainPanel.Size = new Size(343, 295);
             mainPanel.TabIndex = 1;
             mainPanel.Paint += MainPanel_Paint;
             // 
@@ -86,20 +78,20 @@ namespace FinalProject
             orderDetailsLabel.AutoSize = true;
             orderDetailsLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             orderDetailsLabel.ForeColor = Color.FromArgb(45, 52, 54);
-            orderDetailsLabel.Location = new Point(30, 20);
+            orderDetailsLabel.Location = new Point(105, 20);
             orderDetailsLabel.Name = "orderDetailsLabel";
-            orderDetailsLabel.Size = new Size(138, 28);
+            orderDetailsLabel.Size = new Size(110, 21);
             orderDetailsLabel.TabIndex = 2;
             orderDetailsLabel.Text = "Order Details";
             // 
             // receiverNoLabel
             // 
             receiverNoLabel.AutoSize = true;
-            receiverNoLabel.Font = new Font("Segoe UI", 9F);
+            receiverNoLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             receiverNoLabel.ForeColor = Color.FromArgb(127, 140, 141);
-            receiverNoLabel.Location = new Point(30, 70);
+            receiverNoLabel.Location = new Point(20, 54);
             receiverNoLabel.Name = "receiverNoLabel";
-            receiverNoLabel.Size = new Size(92, 20);
+            receiverNoLabel.Size = new Size(97, 21);
             receiverNoLabel.TabIndex = 3;
             receiverNoLabel.Text = "Receiver No.";
             // 
@@ -108,64 +100,44 @@ namespace FinalProject
             receiverValueLabel.AutoSize = true;
             receiverValueLabel.Font = new Font("Segoe UI", 10F);
             receiverValueLabel.ForeColor = Color.FromArgb(45, 52, 54);
-            receiverValueLabel.Location = new Point(30, 90);
+            receiverValueLabel.Location = new Point(20, 90);
             receiverValueLabel.Name = "receiverValueLabel";
-            receiverValueLabel.Size = new Size(109, 23);
+            receiverValueLabel.Size = new Size(97, 19);
             receiverValueLabel.TabIndex = 4;
             receiverValueLabel.Text = "09990364060";
-            // 
-            // senderNoLabel
-            // 
-            senderNoLabel.AutoSize = true;
-            senderNoLabel.Font = new Font("Segoe UI", 9F);
-            senderNoLabel.ForeColor = Color.FromArgb(127, 140, 141);
-            senderNoLabel.Location = new Point(30, 130);
-            senderNoLabel.Name = "senderNoLabel";
-            senderNoLabel.Size = new Size(82, 20);
-            senderNoLabel.TabIndex = 5;
-            senderNoLabel.Text = "Sender No.";
-            // 
-            // senderValueLabel
-            // 
-            senderValueLabel.AutoSize = true;
-            senderValueLabel.Font = new Font("Segoe UI", 10F);
-            senderValueLabel.ForeColor = Color.FromArgb(45, 52, 54);
-            senderValueLabel.Location = new Point(30, 150);
-            senderValueLabel.Name = "senderValueLabel";
-            senderValueLabel.Size = new Size(109, 23);
-            senderValueLabel.TabIndex = 6;
-            senderValueLabel.Text = "09572887390";
+            receiverValueLabel.Click += receiverValueLabel_Click;
             // 
             // amountLabel
             // 
             amountLabel.AutoSize = true;
-            amountLabel.Font = new Font("Segoe UI", 9F);
+            amountLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             amountLabel.ForeColor = Color.FromArgb(127, 140, 141);
-            amountLabel.Location = new Point(30, 190);
+            amountLabel.Location = new Point(20, 126);
             amountLabel.Name = "amountLabel";
-            amountLabel.Size = new Size(62, 20);
+            amountLabel.Size = new Size(101, 21);
             amountLabel.TabIndex = 7;
-            amountLabel.Text = "Amount";
+            amountLabel.Text = "Amount Sent";
             // 
             // amountValueLabel
             // 
             amountValueLabel.AutoSize = true;
             amountValueLabel.Font = new Font("Segoe UI", 10F);
             amountValueLabel.ForeColor = Color.FromArgb(45, 52, 54);
-            amountValueLabel.Location = new Point(30, 210);
+            amountValueLabel.Location = new Point(20, 161);
             amountValueLabel.Name = "amountValueLabel";
-            amountValueLabel.Size = new Size(60, 23);
+            amountValueLabel.Size = new Size(59, 19);
             amountValueLabel.TabIndex = 8;
-            amountValueLabel.Text = "₱5,000";
+            amountValueLabel.Text = "Amount";
+            amountValueLabel.Click += amountValueLabel_Click;
             // 
             // dateTimeLabel
             // 
             dateTimeLabel.AutoSize = true;
-            dateTimeLabel.Font = new Font("Segoe UI", 9F);
+            dateTimeLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dateTimeLabel.ForeColor = Color.FromArgb(127, 140, 141);
-            dateTimeLabel.Location = new Point(30, 250);
+            dateTimeLabel.Location = new Point(20, 196);
             dateTimeLabel.Name = "dateTimeLabel";
-            dateTimeLabel.Size = new Size(82, 20);
+            dateTimeLabel.Size = new Size(84, 21);
             dateTimeLabel.TabIndex = 9;
             dateTimeLabel.Text = "Date & Time";
             // 
@@ -174,34 +146,12 @@ namespace FinalProject
             dateTimeValueLabel.AutoSize = true;
             dateTimeValueLabel.Font = new Font("Segoe UI", 10F);
             dateTimeValueLabel.ForeColor = Color.FromArgb(45, 52, 54);
-            dateTimeValueLabel.Location = new Point(30, 270);
+            dateTimeValueLabel.Location = new Point(20, 231);
             dateTimeValueLabel.Name = "dateTimeValueLabel";
-            dateTimeValueLabel.Size = new Size(174, 23);
+            dateTimeValueLabel.Size = new Size(148, 19);
             dateTimeValueLabel.TabIndex = 10;
             dateTimeValueLabel.Text = "Dec 4, 2023 10:30 AM";
             dateTimeValueLabel.Click += dateTimeValueLabel_Click;
-            // 
-            // newBalanceLabel
-            // 
-            newBalanceLabel.AutoSize = true;
-            newBalanceLabel.Font = new Font("Segoe UI", 9F);
-            newBalanceLabel.ForeColor = Color.FromArgb(127, 140, 141);
-            newBalanceLabel.Location = new Point(30, 310);
-            newBalanceLabel.Name = "newBalanceLabel";
-            newBalanceLabel.Size = new Size(95, 20);
-            newBalanceLabel.TabIndex = 11;
-            newBalanceLabel.Text = "New Balance";
-            // 
-            // newBalanceValueLabel
-            // 
-            newBalanceValueLabel.AutoSize = true;
-            newBalanceValueLabel.Font = new Font("Segoe UI", 10F);
-            newBalanceValueLabel.ForeColor = Color.FromArgb(45, 52, 54);
-            newBalanceValueLabel.Location = new Point(30, 330);
-            newBalanceValueLabel.Name = "newBalanceValueLabel";
-            newBalanceValueLabel.Size = new Size(100, 23);
-            newBalanceValueLabel.TabIndex = 12;
-            newBalanceValueLabel.Text = "₱12,495,000";
             // 
             // recentTransactionButton
             // 
@@ -209,18 +159,19 @@ namespace FinalProject
             recentTransactionButton.FlatStyle = FlatStyle.Flat;
             recentTransactionButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             recentTransactionButton.ForeColor = Color.White;
-            recentTransactionButton.Location = new Point(50, 540);
+            recentTransactionButton.Location = new Point(40, 451);
             recentTransactionButton.Name = "recentTransactionButton";
             recentTransactionButton.Size = new Size(275, 50);
             recentTransactionButton.TabIndex = 13;
             recentTransactionButton.Text = "Go to Recent Transaction";
             recentTransactionButton.UseVisualStyleBackColor = false;
+            recentTransactionButton.Click += recentTransactionButton_Click;
             recentTransactionButton.Paint += Button_Paint;
             // 
             // Form5
             // 
             BackColor = Color.FromArgb(226, 240, 203);
-            ClientSize = new Size(375, 667);
+            ClientSize = new Size(375, 555);
             Controls.Add(successLabel);
             Controls.Add(mainPanel);
             Controls.Add(recentTransactionButton);
@@ -242,14 +193,10 @@ namespace FinalProject
         private Label orderDetailsLabel;
         private Label receiverNoLabel;
         private Label receiverValueLabel;
-        private Label senderNoLabel;
-        private Label senderValueLabel;
         private Label amountLabel;
         private Label amountValueLabel;
         private Label dateTimeLabel;
         private Label dateTimeValueLabel;
-        private Label newBalanceLabel;
-        private Label newBalanceValueLabel;
         private Button recentTransactionButton;
 
         // Custom paint methods for rounded appearance
