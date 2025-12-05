@@ -25,10 +25,12 @@ namespace FinalProject
                 receiverValueLabel.Text = "Unknown Receiver";
             }
 
+            // Using the current system time for display
             dateTimeValueLabel.Text = DateTime.Now.ToString("MMMM dd, yyyy hh:mm tt");
 
             if (_transaction.Amount > 0)
             {
+                // "C" formats the amount as currency based on the current culture
                 amountValueLabel.Text = _transaction.Amount.ToString("C");
             }
             else
@@ -37,6 +39,7 @@ namespace FinalProject
             }
         }
 
+        // --- Other event handlers (omitted for brevity) ---
         private void dateTimeValueLabel_Click(object sender, EventArgs e)
         {
         }
@@ -53,10 +56,27 @@ namespace FinalProject
         {
 
         }
+        // --- End of other event handlers ---
 
+
+        /// <summary>
+        /// Navigates to the Recent Transactions Form (assumed to be Form6).
+        /// </summary>
         private void recentTransactionButton_Click(object sender, EventArgs e)
         {
+            // 1. Create an instance of the new form (e.g., Form6 for recent transactions)
+            // You might need to pass data to Form6, depending on its requirements.
+            // For simplicity, we are assuming Form6 has a default constructor.
+            Form RecentTransaction = new RecentTransaction(); // **Replace 'Form6' with the actual name of your recent transactions form**
 
+            // 2. Show the new form
+            RecentTransaction.Show();
+
+            // 3. (Optional but recommended for form navigation) Hide the current form
+            this.Hide();
+
+            // OR: Close the current form if you don't need to return to it.
+            // this.Close();
         }
     }
 }

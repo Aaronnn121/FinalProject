@@ -107,7 +107,7 @@
             usernameTextBox.PlaceholderText = "Username";
             usernameTextBox.Size = new Size(228, 23);
             usernameTextBox.TabIndex = 4;
-            usernameTextBox.Text = "qwerty";
+            usernameTextBox.Text = "poiuytr";
             usernameTextBox.TextChanged += usernameTextBox_TextChanged;
             // 
             // welcomeLabel
