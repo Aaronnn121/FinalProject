@@ -9,30 +9,35 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinalProject.Models; // Essential: Finds the definition for your 'User' model
 
-// CRITICAL FIX: The conflicting 'using Microsoft.VisualBasic.ApplicationServices;' 
-// is omitted to prevent the "ambiguous reference" error for the 'User' type.
-
 namespace FinalProject
 {
     public partial class RecentTransaction : Form
     {
-        // FIX: Correctly instantiate the dedicated Repository class
+        // repository instance
         private readonly RecentTransactionRepository repository = new RecentTransactionRepository();
+
+        // Single-instance reference so other forms can refresh the view
+        public static RecentTransaction Instance { get; private set; }
 
         public RecentTransaction()
         {
             InitializeComponent();
+            Instance = this;
             LoadUsersToDataGridView();
+        }
+
+        protected override void OnFormClosed(FormClosedEventArgs e)
+        {
+            base.OnFormClosed(e);
+            Instance = null;
         }
 
         private void LoadUsersToDataGridView()
         {
             List<User> users = repository.GetAll();
 
-            // NOTE: Ensure your DataGridView control is named 'dgViewUsers' in the designer.
+            // Ensure your DataGridView control is named 'dgViewUsers' in the designer.
             dgViewUsers.DataSource = users;
-
-            // CRITICAL: Force the DataGridView to redraw and display changes
             dgViewUsers.Refresh();
         }
 
